@@ -19,9 +19,7 @@ const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
-db.users = require("../models/user.model.js")(sequelize, Sequelize);
-
-db.quotations.hasMany(db.estimations);
+db.pythonData = require("../models/PythonData.model")(sequelize, Sequelize);
 
 db.sequelize.sync();
 

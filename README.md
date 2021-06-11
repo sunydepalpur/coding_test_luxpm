@@ -38,3 +38,5 @@ Thank you for your interest again. I look forward to hearing from you.
 Best regards.
 
 Young Yu
+
+docker run --name con-mysql -v /tmp/db:/var/lib/mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=choudhary -d mysql

@@ -4,7 +4,6 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const passport = require("passport");
 const path = require("path");
-const Passport = require('./config/passport');
 const cors = require('cors');
 
 const app = express();
@@ -44,10 +43,10 @@ app.use(function (req, res, next) {
     next();
 });
 //Connect to mongodb
-var passports = Passport();
+// var passports = Passport();
 
 //Routes
-require('./routes/User.routes')(app);
+require('./routes/Python.routes')(app);
 
 const port = process.env.PORT || 5000;  //process.env.port is Heroku's port if you choose to deplay the app there
 app.listen(port, () => console.log("Server up and running on port " + port));
